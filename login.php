@@ -9,7 +9,7 @@
                 <input type="password" name="password" class="mt-1 p-2 rounded-lg w-full" placeholder="Password" required>
             </div>
             <!-- <button type="submit" class="bg-red-500 text-white p-2 rounded-lg w-full">Login</button> -->
-             <a href="index.php" class="bg-red-500 text-white p-2 rounded-lg w-full block text-center">Login</a>
+             <a href="admin/" class="bg-red-500 text-white p-2 rounded-lg w-full block text-center">Login</a>
         </form>
     </div>
 <?php include 'footer.php'; ?>
