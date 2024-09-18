@@ -4,7 +4,7 @@
 <hr class="h-1 bg-blue-600">
 
 <div class="text-right my-5">
-    <a href="" class="bg-blue-600 text-white px-4 py-3 rounded-lg">Add Category</a>
+    <a href="createcategory.php" class="bg-blue-600 text-white px-4 py-3 rounded-lg">Add Category</a>
 </div>
 
 <table class="w-full">
