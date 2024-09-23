@@ -26,7 +26,7 @@ include '../includes/closeconnection.php';
         <td class="border p-2"><?php echo $row['name']; ?></td>
         <td class="border p-2">
             <a href="editcategory.php?id=<?php echo $row['id']; ?>" class="bg-blue-600 text-white px-4 py-1 rounded-lg">Edit</a>
-            <a href="" class="bg-red-600 text-white px-4 py-1 rounded-lg">Delete</a>
+            <a href="actioncategory.php?delete_id=<?php echo $row['id'];?>" class="bg-red-600 text-white px-4 py-1 rounded-lg" onclick="return confirm('Are you sure to Delete?');">Delete</a>
         </td>
     </tr>
     <?php } ?>

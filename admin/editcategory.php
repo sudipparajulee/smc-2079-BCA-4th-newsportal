@@ -11,10 +11,11 @@ include '../includes/closeconnection.php';
 <hr class="h-1 bg-blue-600">
 
 <form action="actioncategory.php" method="POST" class="mt-5">
+    <input type="hidden" name="id" value="<?php echo $row['id'];?>">
     <input type="text" class="w-full border p-3 my-2 rounded-lg" placeholder="Priority" name="priority" value="<?php echo $row['priority'];?>">
     <input type="text" class="w-full border p-3 my-2 rounded-lg" placeholder="Category Name" name="name" value="<?php echo $row['name']; ?>">
     <div class="flex justify-center mt-2">
-        <button class="bg-blue-600 text-white px-4 py-3 rounded-lg" name="store">Update Category</button>
+        <button class="bg-blue-600 text-white px-4 py-3 rounded-lg" name="update">Update Category</button>
         <a href="category.php" class="bg-red-600 text-white px-4 py-3 rounded-lg ml-3">Cancel</a>
     </div>
 </form>
