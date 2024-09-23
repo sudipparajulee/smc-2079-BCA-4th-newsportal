@@ -1,6 +1,6 @@
 <?php include 'header.php'; 
 include '../includes/dbconnection.php';
-$qry = "SELECT * FROM categories";
+$qry = "SELECT * FROM categories ORDER BY priority";
 $result = mysqli_query($conn,$qry);
 include '../includes/closeconnection.php';
 ?>
@@ -25,7 +25,7 @@ include '../includes/closeconnection.php';
         <td class="border p-2"><?php echo $row['priority'];?></td>
         <td class="border p-2"><?php echo $row['name']; ?></td>
         <td class="border p-2">
-            <a href="" class="bg-blue-600 text-white px-4 py-1 rounded-lg">Edit</a>
+            <a href="editcategory.php?id=<?php echo $row['id']; ?>" class="bg-blue-600 text-white px-4 py-1 rounded-lg">Edit</a>
             <a href="" class="bg-red-600 text-white px-4 py-1 rounded-lg">Delete</a>
         </td>
     </tr>
