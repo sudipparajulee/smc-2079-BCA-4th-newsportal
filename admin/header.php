@@ -18,7 +18,7 @@
                     <a href="category.php" class="block hover:bg-gray-200 p-4 text-lg font-bold rounded-lg hover:text-xl">Categories</a>
                 </li>
                 <li class="px-2">
-                    <a href="index.php" class="block hover:bg-gray-200 p-4 text-lg font-bold rounded-lg hover:text-xl">News</a>
+                    <a href="news.php" class="block hover:bg-gray-200 p-4 text-lg font-bold rounded-lg hover:text-xl">News</a>
                 </li>
                 <li class="px-2">
                     <a href="index.php" class="block hover:bg-gray-200 p-4 text-lg font-bold rounded-lg hover:text-xl">Notices</a>
