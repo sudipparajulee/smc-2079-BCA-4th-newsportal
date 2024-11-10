@@ -21,7 +21,7 @@
                     <a href="news.php" class="block hover:bg-gray-200 p-4 text-lg font-bold rounded-lg hover:text-xl">News</a>
                 </li>
                 <li class="px-2">
-                    <a href="index.php" class="block hover:bg-gray-200 p-4 text-lg font-bold rounded-lg hover:text-xl">Notices</a>
+                    <a href="notice.php" class="block hover:bg-gray-200 p-4 text-lg font-bold rounded-lg hover:text-xl">Notices</a>
                 </li>
                 <li class="px-2">
                     <a href="index.php" class="block hover:bg-gray-200 p-4 text-lg font-bold rounded-lg hover:text-xl">Logout</a>
