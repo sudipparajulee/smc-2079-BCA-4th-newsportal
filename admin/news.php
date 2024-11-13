@@ -1,11 +1,9 @@
-
-
 <?php include 'header.php'; ?>
 <h1 class="font-bold text-4xl">All News</h1>
 <hr class="h-1 bg-blue-600">
 
 <div class="text-right my-5">
-    <a href="" class="bg-blue-600 text-white px-4 py-3 rounded-lg">Add News</a>
+    <a href="createnews.php" class="bg-blue-600 text-white px-4 py-3 rounded-lg">Add News</a>
 </div>
 
 <table class="w-full">
