@@ -1,4 +1,9 @@
-<?php include 'header.php'; ?>
+<?php include 'header.php'; 
+include '../includes/dbconnection.php';
+$qry = "SELECT * FROM news INNER JOIN categories ON news.category_id = categories.id ORDER BY date DESC";
+$result = mysqli_query($conn, $qry);
+include '../includes/closeconnection.php';
+?>
 <h1 class="font-bold text-4xl">All News</h1>
 <hr class="h-1 bg-blue-600">
 
@@ -15,16 +20,22 @@
         <th class="border p-2 bg-gray-100">Category</th>
         <th class="border p-2 bg-gray-100">Action</th>
     </tr>
+    <?php 
+    while($row = mysqli_fetch_assoc($result))
+    { ?>
     <tr class="text-center">
-        <td class="border p-2">2021-12-12</td>
-        <td class="border p-2">Image</td>
-        <td class="border p-2">News Title</td>
-        <td class="border p-2">News Description</td>
-        <td class="border p-2">Category</td>
+        <td class="border p-2"><?= $row['date'] ?></td>
+        <td class="border p-2">
+            <img src="../uploads/<?= $row['photopath'] ?>" alt="" class="w-20 h-20 object-cover">
+        </td>
+        <td class="border p-2"><?= $row['title']; ?></td>
+        <td class="border p-2"><?= $row['description']; ?></td>
+        <td class="border p-2"><?= $row['name']; ?></td>
         <td class="border p-2">
             <a href="" class="bg-blue-600 text-white px-4 py-1 rounded-lg">Edit</a>
             <a href="" class="bg-red-600 text-white px-4 py-1 rounded-lg" onclick="return confirm('Are you sure to Delete?');">Delete</a>
         </td>
     </tr>
+    <?php } ?>
 </table>
 <?php include 'footer.php'; ?>
