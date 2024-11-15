@@ -23,6 +23,7 @@ include '../includes/closeconnection.php';
     <?php 
     while($row = mysqli_fetch_assoc($result))
     { ?>
+    
     <tr class="text-center">
         <td class="border p-2"><?= $row['date'] ?></td>
         <td class="border p-2">
