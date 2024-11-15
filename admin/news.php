@@ -1,6 +1,6 @@
 <?php include 'header.php'; 
 include '../includes/dbconnection.php';
-$qry = "SELECT * FROM news INNER JOIN categories ON news.category_id = categories.id ORDER BY date DESC";
+$qry = "SELECT news.*,categories.name FROM news INNER JOIN categories ON news.category_id = categories.id ORDER BY date DESC";
 $result = mysqli_query($conn, $qry);
 include '../includes/closeconnection.php';
 ?>
@@ -32,7 +32,7 @@ include '../includes/closeconnection.php';
         <td class="border p-2"><?= $row['description']; ?></td>
         <td class="border p-2"><?= $row['name']; ?></td>
         <td class="border p-2">
-            <a href="" class="bg-blue-600 text-white px-4 py-1 rounded-lg">Edit</a>
+            <a href="editnews.php?id=<?= $row['id']; ?>" class="bg-blue-600 text-white px-4 py-1 rounded-lg">Edit</a>
             <a href="" class="bg-red-600 text-white px-4 py-1 rounded-lg" onclick="return confirm('Are you sure to Delete?');">Delete</a>
         </td>
     </tr>
