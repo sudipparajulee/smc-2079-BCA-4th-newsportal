@@ -34,7 +34,7 @@ include '../includes/closeconnection.php';
         <td class="border p-2"><?= $row['name']; ?></td>
         <td class="border p-2">
             <a href="editnews.php?id=<?= $row['id']; ?>" class="bg-blue-600 text-white px-4 py-1 rounded-lg">Edit</a>
-            <a href="" class="bg-red-600 text-white px-4 py-1 rounded-lg" onclick="return confirm('Are you sure to Delete?');">Delete</a>
+            <a href="actionnews.php?deleteid=<?= $row['id']; ?>" class="bg-red-600 text-white px-4 py-1 rounded-lg" onclick="return confirm('Are you sure to Delete?');">Delete</a>
         </td>
     </tr>
     <?php } ?>

@@ -26,6 +26,8 @@ include '../includes/closeconnection.php';
     <p>Current Picture:</p>
     <img src="../uploads/<?= $row['photopath'] ?>" alt="" class="w-32 h-32 object-cover">
     <input type="file" class="w-full border p-3 my-2 rounded-lg" name="photopath">
+    <input type="hidden" name="oldpath" value="<?= $row['photopath']?>">
+    <input type="hidden" name="id" value="<?= $row['id']?>">
     <div class="flex justify-center mt-2">
         <button class="bg-blue-600 text-white px-4 py-3 rounded-lg" name="update">Update News</button>
         <a href="news.php" class="bg-red-600 text-white px-4 py-3 rounded-lg ml-3">Cancel</a>
