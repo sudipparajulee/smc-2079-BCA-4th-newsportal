@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(!isset($_SESSION['check_login'])){
+    header('location: ../login.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +30,7 @@
                     <a href="notice.php" class="block hover:bg-gray-200 p-4 text-lg font-bold rounded-lg hover:text-xl">Notices</a>
                 </li>
                 <li class="px-2">
-                    <a href="index.php" class="block hover:bg-gray-200 p-4 text-lg font-bold rounded-lg hover:text-xl">Logout</a>
+                    <a href="logout.php" class="block hover:bg-gray-200 p-4 text-lg font-bold rounded-lg hover:text-xl">Logout</a>
                 </li>
                 
             </ul>
