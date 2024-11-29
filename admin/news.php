@@ -29,12 +29,16 @@ include '../includes/closeconnection.php';
         <td class="border p-2">
             <img src="../uploads/<?= $row['photopath'] ?>" alt="" class="w-20 h-20 object-cover">
         </td>
-        <td class="border p-2"><?= $row['title']; ?></td>
-        <td class="border p-2"><?= $row['description']; ?></td>
+        <td class="border p-2 w-44"><?= $row['title']; ?></td>
+        <td class="border p-2">
+            <div class="h-32 overflow-auto"><?= $row['description']; ?></div>
+        </td>
         <td class="border p-2"><?= $row['name']; ?></td>
         <td class="border p-2">
-            <a href="editnews.php?id=<?= $row['id']; ?>" class="bg-blue-600 text-white px-4 py-1 rounded-lg">Edit</a>
-            <a href="actionnews.php?deleteid=<?= $row['id']; ?>" class="bg-red-600 text-white px-4 py-1 rounded-lg" onclick="return confirm('Are you sure to Delete?');">Delete</a>
+            <div class="flex gap-2">
+                <a href="editnews.php?id=<?= $row['id']; ?>" class="bg-blue-600 text-white px-4 py-1 rounded-lg">Edit</a>
+                <a href="actionnews.php?deleteid=<?= $row['id']; ?>" class="bg-red-600 text-white px-4 py-1 rounded-lg" onclick="return confirm('Are you sure to Delete?');">Delete</a>
+            </div>
         </td>
     </tr>
     <?php } ?>
