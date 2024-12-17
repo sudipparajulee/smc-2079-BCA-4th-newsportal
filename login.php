@@ -22,6 +22,13 @@ if(isset($_POST['login'])){
     $password = $_POST['password'];
     //validations here
 
+    //check if username is string
+    $exp = "/^[a-zA-Z0-9]+$/";
+    if(!preg_match($exp, $username)){
+        echo '<script>alert("Username not valid")</script>';
+        die();
+    }
+
     $password = md5($password);
     $qry = "SELECT * FROM users WHERE username='$username' and password='$password'";
     include 'includes/dbconnection.php';

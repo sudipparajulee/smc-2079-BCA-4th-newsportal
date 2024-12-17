@@ -37,6 +37,29 @@ if(isset($_POST['register']))
         echo '<script>alert("All fields are required")</script>';
         die();
     }
+
+    //check if name is string with space
+    $exp = "/^[a-zA-Z ]+$/";
+    if(!preg_match($exp, $name)){
+        echo '<script>alert("Enter a Valid Name")</script>';
+        die();
+    }
+
+    //for valid email address
+    // $emailexp = "/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/";
+    // if(!preg_match($emailexp, $email)){
+    //     echo '<script>alert("Enter a Valid Email Address")</script>';
+    //     die();
+    // }
+
+    //phone exact 10 digits start with 98 or 97
+    // $phoneexp = "/^(98|97)[0-9]{8}$/";
+    // if(!preg_match($phoneexp, $phone)){
+    //     echo '<script>alert("Enter a Valid Phone Number")</script>';
+    //     //back
+    //     echo '<script>window.history.back();</script>';
+    // }
+
     $password = md5($password);
     $qry = "INSERT INTO users (name, username, password) VALUES ('$name', '$username', '$password')";
     include 'includes/dbconnection.php';
